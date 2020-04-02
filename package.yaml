@@ -1,0 +1,21 @@
+name:                meh
+version:             0.1.0.0
+#synopsis:
+#description:
+homepage:            https://github.com/denibertovic/meh#readme
+license:             BSD3
+author:              Deni Bertovic
+maintainer:          deni@denibertovic.com
+copyright:           2020 Deni Bertovic
+category:            Desktop
+extra-source-files:
+- README.md
+
+dependencies:
+  - base >= 4.7 && < 5
+  - aosd
+
+executables:
+  meh:
+    source-dirs:      src
+    main:             Main.hs
