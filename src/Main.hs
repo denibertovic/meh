@@ -41,7 +41,7 @@ main :: IO ()
 main = do
       execParser opts >>= \(MyArgs x y ) -> do
         withAosd
-            defaultOpts { offset = (maybe 0 fromIntegral x, maybe 0 fromIntegral y), classHint = Just $ XClassHint { resName = "meh", resClass = "meh" } }
+            defaultOpts { xPos = Center, yPos = Center, offset = (maybe 0 fromIntegral x, maybe 0 fromIntegral y), classHint = Just $ XClassHint { resName = "meh", resClass = "meh" } }
             (textRenderer markup) { alignment = Just AlignCenter, colour = orange }
             (\a -> aosdFlash a (symDurations 1000 1000))
 
